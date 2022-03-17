@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo&family=Hubballi&family=Kumbh+Sans&family=Montserrat:wght@100&family=Poppins:wght@100;200&family=Roboto+Mono:wght@100&family=Source+Serif+4&family=Space+Mono&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Hubballi', cursive;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(102, 32, 90);
+}
+
+.digital-clock {
+  position: relative;
+  color: rgb(0, 0, 0);
+  background: rgb(4, 1, 46);
+  width: 425px;
+  padding: 20px 45px;
+  box-shadow: 0 5px 25px rgba(3, 12, 32, 0.8);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.time {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hours,
+.dots,
+.minutes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  padding: 0 10px;
+  line-height: 125px;
+}
+
+.hours,
+.minutes {
+  font-size: 6.5em;
+  width: 125px;
+  color: blueviolet;
+}
+
+.dots {
+  font-size: 5em;
+  color: #6e02ac;
+
+}
+
+.hours {
+  color: rgb(54, 22, 85);
+  background: -webkit-linear-gradient(90deg, #511fadfa, #1e7ea1);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+
+}
+
+.minutes {
+  background: -webkit-linear-gradient(90deg, #981dc9, #d15a0b);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+
+}
+
+.right-side {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.period,
+.seconds {
+  font-size: 1.2em;
+  font-weight: 500;
+
+}
+
+.period {
+  transform: translateY(-20px);
+  background: -webkit-linear-gradient(90deg, #981dc9, #ffa807);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.seconds {
+  transform: translateY(16px);
+  background: -webkit-linear-gradient(90deg, #981dc9, #ffa807);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.calendar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3em;
+  font-weight: 500;
+  margin-bottom: 5px;
+
+  background: -webkit-linear-gradient(90deg, #ae4af6, #ff98d1);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.day-name,
+.day-number,
+.day-year {
+  margin-left: 8px;
+
+}
+
+.dot-menu-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  color: #ae4af6;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.dot-menu {
+  z-index: 999;
+  position: absolute;
+  top: 7px;
+  right: 5px;
+  list-style: none;
+  background: rgb(4, 30, 85);
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 25px rgba(22, 58, 105, 0.8);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease;
+
+}
+
+.dot-menu.active {
+  visibility: visible;
+  opacity: 1;
+
+}
+
+.menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock-format-text {
+  color: #ae4af6;
+  font-size: 0.9em;
+  border-radius: 75px;
+  margin-right: 20px;
+
+}
+
+.format-switch-btn {
+  width: 35px;
+  height: 15px;
+  background: #5778c5;
+  border-radius: 75px;
+  box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.1);
+
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.format-switch-btn:before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: orchid;
+  border-radius: 50%;
+  box-shadow: 0 5px 25px orchid;
+  transform: translateX(-10px);
+  transition: 0.3s ease;
+  transition-property: background, transform;
+}
+
+.format-switch-btn.active:before {
+  background: #0bff8d;
+  box-shadow: 0 5px 25px #0bff8d;
+  transform: translateX(10px);
+}
